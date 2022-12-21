@@ -33,6 +33,15 @@ switch(a) {
         console.log('value of a is neither 5 nor 10.')
 }
 
+let counter = 0;
+
+while(counter<=100){
+    if(counter%2==0){
+        console.log(counter)
+    }
+    counter++
+}
+
 // 1, 2, Fizz, 4, Buzz, Fizz
 
 // (a>b) ? codeBlock_1 : codeBlock_2
