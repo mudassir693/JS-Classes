@@ -20,8 +20,6 @@ let count = 0;
 for(let count2=0; count2<arr.length; count2+=1){
     console.log(arr[count2])
 }
-
-
-// if-else => ternary operator condition ? code_block_one : code_block_two
+// if-else => ternary operator => condition ? code_block_one : code_block_two
 // if-else if-else => switch
 // while => for
