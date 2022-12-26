@@ -67,12 +67,21 @@ let subtract = function(num1,num2){
     return 'invalid'
 }
 
-let multiply = function(num1,num2){
+// let multiply = function(num1,num2){
+//     let multiply = num1*num2
+//     if((multiply>20)&&(multiply<30)){
+//         return multiply
+//     }
+//     return 'invalid'
+// }
+
+// arrow functions
+
+let multiply = (num1,num2)=>{
     let multiply = num1*num2
     if((multiply>20)&&(multiply<30)){
         return multiply
     }
     return 'invalid'
 }
-
 console.log(multiply(3,2))
