@@ -71,16 +71,53 @@ let peoples = [
 
 // console.log(test)
 
-let female = (arr)=>{
-    let resArr = []
-    arr.forEach((each)=>{
-        if(each.Gender=="Female"){
-            resArr.push(each)
-        }
-    })
-    return resArr
+// let female = (arr)=>{
+//     let resArr = []
+//     arr.forEach((each)=>{
+//         if(each.Gender=="Female"){
+//             resArr.push(each)
+//         }
+//     })
+//     return resArr
+// }
+
+// filter
+let female2 = (arrr)=>{
+    return arrr.filter((each)=>each.Gender=='Female')
 }
 
-let test2 = female(peoples)
+// find
+
+let findPeople = (arr, personName)=>{
+    if(!arr || !personName){
+        return 'please provide valid perameters'
+    }
+    return arr.find((each)=>each.Name == personName)
+}
+
+// every
+function isAllFemale(arr){
+    return arr.every((individual) => individual.Gender == 'Female')
+}
+
+// some
+function isFemaleExist(arr){
+    return arr.some((individual) => individual.Gender == 'Female')
+}
+
+// indexOfconst 
+beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+
+console.log(beasts.indexOf('bison'));
+// expected output: 1
+
+// start from index 2
+console.log(beasts.indexOf('bison', 2));
+// expected output: 4
+
+console.log(beasts.indexOf('giraffe'));
+// expected output: -1
+
+let test2 = indeOfFn(peoples,'Faraz')
 
 console.log(test2)
