@@ -118,6 +118,51 @@ console.log(beasts.indexOf('bison', 2));
 console.log(beasts.indexOf('giraffe'));
 // expected output: -1
 
-let test2 = indeOfFn(peoples,'Faraz')
+// let test2 = indeOfFn(peoples,'Faraz')
 
-console.log(test2)
+// console.log(test2)
+
+
+
+let = practice = []
+
+// pop => remove from end
+// push => insert at the end => 
+// shift => remove from start
+// unshift => insert at start
+
+practice.push('faraz')
+practice.push('mudassir')
+practice.push('hadia')
+practice.pop()
+practice.push('hadia')
+practice.shift()
+practice.unshift('mubashir')
+
+
+
+// sort
+
+let numbers = [4,7,4,2,1,0]
+// numbers.sort((a,b)=>b-a)
+numbers.slice(1,5)
+console.log(numbers.slice(1,5))
+
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue
+);
+
+console.log(sumWithInitial)
+
+//todo list
+eachObj = {
+    Title:'',
+    Completed:false
+}
+
+let todos = [] 
