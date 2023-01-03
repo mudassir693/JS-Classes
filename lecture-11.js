@@ -2,6 +2,7 @@
 
 let arr = [1,2,4,3,5]
 
+
 // for(let counter=0;counter<arr.length; counter++){
 //     console.log(arr[counter])
 // }
@@ -52,6 +53,7 @@ let peoples = [
     }
 ]
 
+
 // arr[0]
 // objectName.key
 
@@ -81,13 +83,15 @@ let peoples = [
 //     return resArr
 // }
 
-// filter
+// 2-filter
 let female2 = (arrr)=>{
     return arrr.filter((each)=>each.Gender=='Female')
 }
+let filteredArr = peoples.filter((each)=>each.Gender=='Female')
 
+
+console.log(filteredArr)
 // find
-
 let findPeople = (arr, personName)=>{
     if(!arr || !personName){
         return 'please provide valid perameters'
@@ -144,7 +148,11 @@ practice.unshift('mubashir')
 // sort
 
 let numbers = [4,7,4,2,1,0]
-// numbers.sort((a,b)=>b-a)
+numbers.sort((a,b)=>b-a) // descending
+console.log(numbers)
+numbers.sort((a,b)=>a-b) // ascending
+console.log(numbers)
+
 numbers.slice(1,5)
 console.log(numbers.slice(1,5))
 
