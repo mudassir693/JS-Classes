@@ -1,102 +1,75 @@
-//  functions
+let students = ['Faraz', 'Hadia', 'Asma'];
 
-let arr = ['Faraz','Hadia','Asma'];
+let getStudent = function() {
+    let studentList = ['Faraz', 'Hadia', 'Asma'];
+    for (let i = 0; i < studentList.length; i++) {
+        if (studentList[i] === 'Hadia') {
+            return studentList[i];
+        }
+    }
+    return 'Student not found';
+}
 
-// //  for => loop
+console.log('getStudent: ', getStudent());
 
-// arr.forEach((each)=>{
-//     console.log(each)
-// })
+let numbers = [5, 7, 3, 2, 7];
+let additionalNumbers = [2, 4, 1];
 
-let stdFn = function(){
-    let arr = ['faraz','hadia','asma']
-    for(let eachStd=0;eachStd<arr.length;eachStd++){
-        if(arr[eachStd]=='hadia'){
-            return arr[eachStd]
+let findMinNumber = function(nums) {
+    let minNum = nums[0];
+
+    for (let i = 0; i < nums.length; i++) {
+        if (minNum > nums[i]) {
+            minNum = nums[i];
         }
     }
 
-    return 'nothing'
+    return minNum;
 }
 
-console.log('stdFn: ',stdFn())
+console.log('Min Number: ', findMinNumber(numbers));
 
-// let fnVariable = stdFn()
-// console.log(fnVariable)
-
-
-// let arr = ['adasd','asda0','adsda']
-
-
-// to get minimum number among all
-let numbers = [5,7,3,2,7]
-let anotherNumber = [2,4,1]
-
-let min = function (num){
-    let minNumber = num[0]  // 5
-
-    for(let each=0;each<num.length;each++){  // 0, 1, 2, 3, 4
-        if(minNumber>num[each]){ // 5>5, 5>7, 5>3, 3>2, 2>7
-            minNumber = num[each] //  3, 2
-        }
+let addNumbers = function(num1, num2) {
+    if (num1 === null || num2 === null) {
+        return 'Please provide both parameters';
     }
-
-    return minNumber // 2
+    return num1 + num2;
 }
 
-// console.log(min('anotherNumber'))
+console.log(addNumbers(5, 10));
 
-let add = function(num1,num2){
-    /// ! => opposite "!false" => true, "!true" => false
-    if(num1==null || num2==null){
-        return 'kindly provide all perameters'
+let addAllNumbers = function(arr) {
+    let total = 0;
+    for (let i = 0; i < arr.length; i++) {
+        total = addNumbers(total, arr[i]);
     }
-    return  num1+num2
+    return total;
 }
 
-console.log(add(5))
-
-let addAll = function(arr){
-    let result=0
-    for(let each=0;each<arr.length;each++){
-        result = add(result,arr[each])
+let subtractNumbers = function(num1, num2) {
+    let result = num1 - num2;
+    if (result >= 0) {
+        return result;
     }
-
-    return result
+    return 'Invalid subtraction';
 }
 
-let subtract = function(num1,num2){
-    let subtract = num1 - num2
-    if(subtract>=0){
-        return subtract
+console.log(subtractNumbers(10, 5));
+
+let multiplyNumbers = function(num1, num2) {
+    let product = num1 * num2;
+    if (product > 20 && product < 30) {
+        return product;
     }
-    return 'invalid'
+    return 'Product not in valid range';
 }
 
-// let multiply = function(num1,num2){
-//     let multiply = num1*num2
-//     if((multiply>20)&&(multiply<30)){
-//         return multiply
-//     }
-//     return 'invalid'
-// }
+console.log(multiplyNumbers(5, 5));
 
-// arrow functions
-
-// let multiply = (num1,num2)=>{
-//     let multiply = num1*num2
-//     if((multiply>20)&&(multiply<30)){
-//         return multiply
-//     }
-//     return 'invalid'
-// }
-
-function multiply(){
-    let multiply = num1*num2
-    if((multiply>20)&&(multiply<30)){
-        return multiply
+let calculateTotal = function(arr) {
+    let totalSum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        totalSum = addNumbers(totalSum, arr[i]);
     }
-    return 'invalid'
+    return totalSum;
 }
-console.log(multiply(3,2))
-
