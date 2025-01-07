@@ -1,86 +1,55 @@
-// 
-// Object => collection of data
-// let Name = 'Faraz'
-// let Age = '22'
-// let Address = 'xyz road, Karachi'
+let employee = {
+    name: "Faraz",
+    age: 22,
+    address: "abc road, Karachi",
+    salary: 12000,
+    cnic: "1231-342357-12"
+};
 
-// let Name1 = 'Mudassir'
-// let Age1 = '22'
-// let Address1 = 'xyz road, Karachi'
+let person = {
+    name: "Mudassir",
+    age: 21,
+    contactInfo: '0318.....'
+};
 
-let Employee = {
-    Name:"Faraz",
-    Age:"22",
-    Address:"abc road, Karachi",
-    Salery:12000,
-    CNIC_No:"1231-342357-12"
-}
-
-let person = new Object()
-person.Name = "Mudassir",
-person.Age = 21,
-person.Contact_info = '0318.....'
-
-let Car = {
-    color:"",
-    model:"",
-    NumberPlate:"",
-    engineNo:""
-}
+let car = {
+    color: "red",
+    model: 2012,
+    numberPlate: "kab123",
+    engineNo: ""
+};
 
 let laptop = {
-    model:'',
-    company:"",
-    color:''
-}
+    model: '',
+    company: '',
+    color: ''
+};
 
-Car.color = "red",
-Car.model = 2012,
-Car.NumberPlate = 'kab123'
+let blog = {
+    name: "Something",
+    writer: "AnyOne"
+};
 
-let Blog = {}
+let girl = {
+    name: 'Areeba',
+    age: 12,
+    address: 'anywhere',
+    phoneNumber: 'xxx-xx'
+};
 
-let Girl = {
-    Name:'Areeba',
-    Age:12,
-    Address:'any where',
-    PhoneNumber:'xxx-xx'
-}
-//  Girl => 0003
-// let AnotherGirl = Girl 
-// AnotherGirl => 0003
+let anotherGirl = Object.assign({}, girl);
+anotherGirl.name = "Another Name";
 
-// AnotherGirl = {
-//     Name:'Areeba',
-//     Age:12,
-//     Address:'any where',
-//     PhoneNumber:'xxx-xx'
-// }
+console.log(girl.address);
+console.log(anotherGirl.name);
 
-// Girl.Name = "another Name"
+let a = 12;
+let b = a;
+a = 4;
+console.log('a:', a);
+console.log('b:', b);
 
-// Girl = {
-//     Name:'another Name',
-//     Age:12,
-//     Address:'any where',
-//     PhoneNumber:'xxx-xx'
-// }
-
-console.log(Girl.Address)
-
-
-// Blog.Name = "Something",
-// Blog.Writter = "AnyOne"
-
-// console.log(Blog)
-
-
-let a = 12  // a = 0001
-
-let b = a  // b = 0002
-
-a = 4    // a = 0001 upd
-
-// a = 4
-// b = 12
-
+let personCopy = person;
+personCopy.name = "Updated Mudassir";
+console.log('person name:', person.name); 
+console.log('personCopy name:', personCopy.name);
